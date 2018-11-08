@@ -1,9 +1,22 @@
 <?php
 
+session_start();
 require '../app/Autoloader.php';
 App\Autoloader::register();
 
-if(isset($_GET['p'])){
+$app = App\App::getInstance();
+
+
+$posts = $app->getTable('Posts');
+$posts = $app->getTable('Categories');
+
+
+
+
+
+
+
+/*if(isset($_GET['p'])){
     $p = $_GET['p'];
 } else {
     $p = 'home';
@@ -11,12 +24,15 @@ if(isset($_GET['p'])){
 
 ob_start();
 if($p === 'home') {
-    require ROOT . "/pages/home.php";
-} elseif ($p === 'single') {
-    require ROOT . "/pages/single.php";
+    require '../pages/home.php';
+} elseif ($p === 'article') {
+    require '../pages/single.php';
+}elseif ($p === 'category') {
+    require '../pages/categorie.php';
 }
+
 $content = ob_get_clean();
-require ROOT . "/pages/templates/default.php";
+require '../pages/templates/default.php';*/
 
 ?>
 
