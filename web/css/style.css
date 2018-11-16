@@ -1,0 +1,48 @@
+/*Global*/
+body{
+    margin-bottom: 60px;
+    width: 100%;
+    overflow-x: hidden;
+    
+}
+
+body > .container {
+    padding: 115px 10px 15px 10px;
+}
+
+.navbar-brand{
+    width: 250px;
+    text-align: center;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #fff;
+}
+
+h3{
+    position: relative;
+    transform: translateX(-50%);
+    left:50%;
+}
+
+/*Accueil*/
+.jumbotron{
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/alaska1.jpg");
+    background-repeat: no-repeat;
+    height: 350px;
+    padding: 0;
+    position: relative;
+}
+
+.header-content{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+
