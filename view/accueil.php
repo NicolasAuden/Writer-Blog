@@ -1,5 +1,10 @@
 <div class="container">
-    
+    <?php
+        if(isset($_SESSION["user"])){
+            echo "Bienvenue ".verifLoginById($_SESSION["user"])->getFirstName()." ".verifLoginById($_SESSION["user"])->getLastName();
+        
+        }
+    ?>
 
     <div class="jumbotron jumbotron-fluid " id="header">
         <canvas class="snow"></canvas>
