@@ -30,5 +30,27 @@ class BddConnect
         }
     }
 
-   
+    public static function getInstance()
+    {
+        if (!self::$instance instanceof self)
+        {
+            self::$instance = new self;
+        }
+        return self::$instance;
+    }
+    
+    public function getDbh()
+    {
+        return $this->dbh;
+    }
+
+    public function __sleep()
+    {
+        return array();
+    }
+    
+    public function __wakeup()
+    {
+        $this->getDbh();
+    }
 }
