@@ -2,6 +2,15 @@
   <div class="row">
     <div class="col-12">
 
+      <?php if(isset($message)){  ?>
+          <div class="alert alert-dismissible alert-secondary">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              
+                  <?php echo $message; ?>
+              
+          </div>
+      <?php } ?>
+
       <form action="index.php?action=addUser" method="POST" onsubmit="return verifForm(this)">
           <div class="form-group">
             <label for="lastName">Nom</label>
