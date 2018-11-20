@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 ob_start();
 
@@ -107,7 +106,7 @@ if(isset($action)){
             if(isset($_POST['comment']) && !empty($_POST['comment'])){
                 $message = addComment();
             }else{
-                $message = "Veuillez saisir du texte dans votre commentaire !";
+                $message = "Veuillez saisir votre commentaire !";
             }
             $post = getOnePost($_POST['idPost']);
             $listComments = getCommentsByPost($_POST['idPost']);
@@ -137,6 +136,3 @@ if(isset($action)){
 include_once("layout/layout.php");
 
 ob_end_flush();
-
-?>
-
