@@ -3,7 +3,6 @@
 session_start();
 ob_start();
 
-
 //includes
 include_once("model/BddConnect.php");
 include_once("controller/PostController.php");
@@ -47,7 +46,7 @@ if(isset($action)){
         case 'login':
             $userLogin = verifLogin();
             if(!$userLogin){
-                $message = "La combinaison identifiant et mot de passe est incorrect";
+                $message = "La combinaison identifiant et mot de passe est incorrecte";
                 $title = "Blog de Jean Forteroche - Se connecter";
                 $vue = "view/login.php";
             }else if(is_string($userLogin)){
@@ -108,7 +107,7 @@ if(isset($action)){
             if(isset($_POST['comment']) && !empty($_POST['comment'])){
                 $message = addComment();
             }else{
-                $message = "Veuillez mettre du texte dans votre commentaire !";
+                $message = "Veuillez saisir du texte dans votre commentaire !";
             }
             $post = getOnePost($_POST['idPost']);
             $listComments = getCommentsByPost($_POST['idPost']);
