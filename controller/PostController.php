@@ -1,16 +1,12 @@
 <?php
 
-
-
 //models
 include_once("./model/Post.php");
 
-function getAllPosts(){
+
+function getOnePost($id){
     $post = new Post();
-    $listPosts = $post->allPosts();
+    $onePost = $post->getPost($id);
 
-    return $listPosts;
+    return $onePost;
 }
-
-
-?>
