@@ -41,15 +41,7 @@
 
     
 
-    <!-- <div class="container">
-        <div class="row">
-            <div class="col-12"> -->
-               
-            <?php include($vue) ?>
-            
-            <!-- </div>
-        </div>
-    </div> -->
+   
 
     
 
@@ -57,7 +49,8 @@
       
     </footer>
 
-
+	<script src="./web/js/verifFormSignUp.js"></script>  
+    <script src="./web/js/script.js"></script> 
            
     
     
