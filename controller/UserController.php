@@ -18,7 +18,6 @@ function verifLoginById($id){
 
 function addUser(){
     $user = new User();
-    $user->setId($_POST['id']);
     $user->setLastName($_POST['lastName']);
     $user->setFirstName($_POST['firstName']);
     $user->setIdentifiant($_POST['identifiant']);
